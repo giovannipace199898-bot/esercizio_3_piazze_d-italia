@@ -1,0 +1,235 @@
+/* Reset e Stili Generali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif; /* Font serif come da design */
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Navigazione Verde */
+header {
+    background-color: #008f4c;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 500px;
+    background: url('assets/duomo_catania.jpg') no-repeat center center/cover;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.btn-explora {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #4ade80;
+    color: #000;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* Griglia Card */
+.section-title {
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+.section-title h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+}
+
+.grid-piazze {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background-color: #f2f2f2;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+    font-size: 0.85rem;
+}
+
+.card-body a {
+    display: block;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer Verde */
+footer {
+    background-color: #008f4c;
+    padding: 40px 20px;
+    font-size: 0.8rem;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-col a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+/* Responsive per Tablet e Mobile */
+@media (max-width: 900px) {
+    .grid-piazze { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .grid-piazze { grid-template-columns: 1fr; }
+    .footer-container { flex-direction: column; gap: 20px; text-align: center; }
+}/* --- Stili Pagina Dettaglio --- */
+
+/* Testata della pagina */
+.page-header {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.header-overlay {
+    background: rgba(0, 0, 0, 0.2); /* Sovrapposizione leggera per leggere il titolo */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-header h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    font-weight: normal;
+}
+
+/* Layout testo */
+.page-content {
+    max-width: 800px; /* Testo centrato e non troppo largo per leggibilità */
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.page-content h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin: 40px 0 20px;
+    color: #444;
+}
+
+.page-content p {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Immagine centrale nella storia */
+.image-center {
+    width: 100%;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.image-center img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Link nel testo (simulando i link di Wikipedia presenti nello screen) */
+.page-content strong, .page-content a {
+    color: #333;
+    text-decoration: underline;
+    text-decoration-color: #999;
+}
+
+/* Adattamento Mobile */
+@media (max-width: 600px) {
+    .page-header { height: 250px; }
+    .page-header h1 { font-size: 1.8rem; }
+}
